@@ -1,4 +1,6 @@
 <!--se usa para cambiar a la rama main / git branch -M main-->
+
+<!-- se traen los cambios para hacer pruebas en develop git pull origin develop -->
 <!-- cambia para la rama main git branch -M main-->
 
 <!-- se sube develop al github con git push -u origin develop -->

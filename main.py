@@ -63,3 +63,43 @@ def ver_promedio():
 
     else:
         print("El estudiante no está registrado.")
+
+
+
+# Muestra las opciones disponibles en el sistema.
+def mostrar_menu():
+    
+    print("\n--- SISTEMA DE REGISTRO DE NOTAS ---")
+    print("1. Registrar estudiante")
+    print("2. Registrar nota")
+    print("3. Ver promedio")
+    print("4. Verificar aprobación")
+    print("5. Salir")
+
+
+# Variable para controlar el ciclo
+opcion = ""
+
+while opcion != "5":
+
+    mostrar_menu()
+
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+        registrar_ingreso()
+
+    elif opcion == "2":
+        registrar_nota()
+
+    elif opcion == "3":
+        ver_promedio()
+
+    elif opcion == "4":
+        verificar_aprobacion()
+
+    elif opcion == "5":
+        print("Gracias por utilizar el sistema.")
+
+    else:
+        print("Opción inválida. Intente nuevamente.")

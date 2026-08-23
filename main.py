@@ -42,8 +42,9 @@ def registrar_nota():
 
 # Calcula y muestra el promedio de un estudiante.
 
+# Calcula y muestra el promedio de un estudiante.
 def ver_promedio():
-    
+
     nombre = input("Ingrese el nombre del estudiante: ")
 
     if nombre in estudiantes:
@@ -65,6 +66,31 @@ def ver_promedio():
         print("El estudiante no está registrado.")
 
 
+# Verifica si el estudiante aprobó o reprobó.
+def verificar_aprobacion():
+
+    nombre = input("Ingrese el nombre del estudiante: ")
+
+    if nombre in estudiantes:
+
+        notas = estudiantes[nombre]
+
+        if len(notas) > 0:
+
+            promedio = sum(notas) / len(notas)
+
+            print(f"\nPromedio de {nombre}: {promedio:.2f}")
+
+            if promedio >= 3.0:
+                print("Estado: APROBADO")
+            else:
+                print("Estado: REPROBADO")
+
+        else:
+            print("El estudiante no tiene notas registradas.")
+
+    else:
+        print("El estudiante no está registrado.")
 
 # Muestra las opciones disponibles en el sistema.
 def mostrar_menu():
